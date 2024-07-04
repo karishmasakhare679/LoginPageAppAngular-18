@@ -57,6 +57,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "port": 4209
+          },
           "configurations": {
             "production": {
               "buildTarget": "LoginPage:build:production"
@@ -65,7 +68,6 @@
               "buildTarget": "LoginPage:build:development"
             }
           },
-          "options": {"port": 4209},
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
