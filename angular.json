@@ -65,6 +65,7 @@
               "buildTarget": "LoginPage:build:development"
             }
           },
+          "options": {"port": 4209},
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
