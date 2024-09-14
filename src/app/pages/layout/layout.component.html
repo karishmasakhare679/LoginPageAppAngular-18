@@ -58,19 +58,25 @@
                 </li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Info</a></li>
-              </ul>
-              
-              
+              </ul>    
         </nav>
+
         <div class="header-right">
           <input type="search" placeholder="serch heare"><button type="button" class="search-btn icon-btn">Search <i class="fa fa-search"></i></button>
             <button type="button" class="cart-btn icon-btn"><i class="fa-solid fa-shopping-cart"></i></button>
+            <button type="button" class="user-btn"><i class="fa fa-user"></i>
+              <span class="user-detail-btn">User Detail</span>
+              <span class="logout-btn" (click)="logout()">Logout</span>
+            </button>
             <button type="button " class="open-menu-btn">
                 <span class="line line-1"></span>
                 <span class="line line-2"></span>
                 <span class="line line-3"></span>
             </button>
         </div>
+
+        
+      
     </div>
 </header>
 

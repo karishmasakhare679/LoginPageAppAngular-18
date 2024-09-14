@@ -173,6 +173,57 @@
   transition: all 0.5s ease;
 }
 
+
+
+/* logout button */
+/* Style the cart button (user icon) */
+/* Style for the entire user button (user icon) */
+.user-btn {
+  position: relative;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Style for the user detail span */
+.user-detail-btn {
+  font-size: 14px;
+  color: #007bff;
+  transition: all 0.3s ease;
+}
+
+/* Hide the logout button initially */
+.logout-btn {
+  display: none;
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-left: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+/* Show the logout button when hovering over the user button */
+.user-btn:hover .logout-btn {
+  display: inline-block;
+}
+
+/* Optional: Change style when hovering over the user detail span */
+.user-btn:hover .user-detail-btn {
+  color: #0056b3; /* Darker shade of blue */
+  text-decoration: underline;
+}
+
+
+
+
+
 @media(max-width:991px){
   .header {
     padding: 12px 0;
@@ -327,8 +378,8 @@
   }
   
   .search-btn {
-    position: absolute;
-    right: 100px;
+    position: fixed;
+    right: 135px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -341,9 +392,11 @@
   }
   
   .search-btn i {
-    margin-left: 5px;
+    margin-left: 10px;
+    
     /* Space between text and icon */
   }
+
 }
 
 

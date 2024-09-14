@@ -2,33 +2,41 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
   loginObj: any = {
-    "EmailId": "",
-    "Password": ""
-  }
+    user_id: "",
+    password: ""
+  };
 
   http = inject(HttpClient);
-constructor (private route:Router){}
 
-  onLogin()
-  {debugger
-    this.http.post("https://freeapi.miniprojectideas.com/api/User/Login",this.loginObj).subscribe((res:any)=>{
-      if(res.result){
-        alert('Login  successfull');
-        localStorage.setItem("angular18Login",this.loginObj.User);
-        this.route.navigateByUrl("dashboared");
-      }
-      else{
-        alert('please check userid or password ');
+  constructor(private router: Router) {}
+
+  onLogin(event: Event) {debugger;
+    event.preventDefault(); // Prevent default form submission
+
+    this.http.post("http://localhost:3000/login", this.loginObj).subscribe({
+      next: (res: any) => {
+        if (res.result) {
+          alert('Login successful');
+          localStorage.setItem("angular18Login", this.loginObj.user_id);
+          this.router.navigateByUrl("/dashboared");
+        } else {
+          alert('Please check user ID or password');
+        }
+      },
+      error: (err) => {
+        console.error('Login error:', err);
+        alert('An error occurred during login. Please try again.');
       }
     });
   }
