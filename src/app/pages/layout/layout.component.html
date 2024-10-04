@@ -62,12 +62,25 @@
         </nav>
 
         <div class="header-right">
-          <input type="search" placeholder="serch heare"><button type="button" class="search-btn icon-btn">Search <i class="fa fa-search"></i></button>
+          <input type="search" placeholder="serch heare"><button type="button" class="search-btn icon-btn">Search<i class="fa fa-search"></i></button>
             <button type="button" class="cart-btn icon-btn"><i class="fa-solid fa-shopping-cart"></i></button>
+           
             <button type="button" class="user-btn"><i class="fa fa-user"></i>
-              <span class="user-detail-btn">User Detail</span>
-              <span class="logout-btn" (click)="logout()">Logout</span>
+              <div class="sub-menu-wrap">
+                <div class="sub-menu-2">
+                  <div class="user-info">
+                    <i class="fa fa-user"> <h2>User Details</h2></i>
+                  </div>
+                  <div class="user-info">
+                    <i class="fa-solid fa-gear"> <h2> Settings</h2> </i>
+                  </div>
+                  <div class="user-info">
+                    <i class="fa fa-cancel"> <h2 (click)="logout()">Logout</h2> </i>
+                  </div>
+                </div>
+              </div>
             </button>
+
             <button type="button " class="open-menu-btn">
                 <span class="line line-1"></span>
                 <span class="line line-2"></span>

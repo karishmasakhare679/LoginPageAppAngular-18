@@ -1,0 +1,36 @@
+.RegisterForm {
+    border: 2px solid black; /* Defines the solid black border */
+    border-radius: 25px;
+    
+    position: absolute;
+    top: 150px;
+    left: 250px;
+    right: 250px; 
+    padding: 20px;
+    box-shadow: 10px 5px 10px 10px rgba(0, 0, 0, 0.5);
+    background-image: url('/public/assets/img/nature.jpeg');
+}
+
+.RegisterForm button{
+    padding: 5px;
+    position:relative;
+    top: 15px;
+    right: 50%px;
+    left: 40%;
+}
+
+.RegisterForm .log-in {
+    padding: 5px;
+    position:relative;
+    top: 15px;
+    right: 50%px;
+    left: 33%;
+}
+
+
+/* *{
+    background-image: url('assets/img/nature.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */

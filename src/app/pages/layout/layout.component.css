@@ -59,11 +59,10 @@
   align-items: center;
   gap: 10px;
   /* Added gap between elements for better spacing */
-
 }
 /* Header Right  open menu button */
-.header-right .open-menu-btn{
- display: none;
+.header-right .open-menu-btn {
+  display: none;
 }
 /* search button */
 .header-right input[type="search"] {
@@ -72,7 +71,6 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   outline: none;
-  
 }
 
 .search-btn {
@@ -99,8 +97,6 @@
 
 .header .menu ul .dropdown a {
   padding-right: 15px;
-  
-
 }
 .header .menu i {
   font-size: 10px;
@@ -120,7 +116,7 @@
   top: 100%;
   left: 0;
   width: 230px;
-   padding: 15px 10;
+  padding: 15px 10;
   background-color: hsl(282, 16%, 21%);
   box-shadow: 0 0 5px hsl(0, 2%, 57%);
   z-index: 1;
@@ -144,7 +140,6 @@
 
 .header .menu .sub-menu .dropdown a {
   padding-right: 34px;
- 
 }
 
 .header .menu .sub-menu span {
@@ -162,11 +157,9 @@
 .header .menu .sub-menu-right {
   left: 100%;
   top: 0;
-  
 }
 
-.header .menu li:hover > .sub-menu
- {
+.header .menu li:hover > .sub-menu {
   opacity: 1;
   transform: scaleY(1);
   visibility: visible;
@@ -174,53 +167,62 @@
 }
 
 
-
-/* logout button */
-/* Style the cart button (user icon) */
-/* Style for the entire user button (user icon) */
+/* user detail nav bar menu */
 .user-btn {
-  position: relative;
   background-color: white;
   border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  position: relative;
+  top: 100%;
 }
 
-/* Style for the user detail span */
-.user-detail-btn {
-  font-size: 14px;
-  color: #007bff;
-  transition: all 0.3s ease;
-}
 
-/* Hide the logout button initially */
-.logout-btn {
-  display: none;
-  background-color: #dc3545;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 4px;
-  margin-left: 10px;
+.sub-menu-wrap {
   position: absolute;
   top: 100%;
-  left: 0;
-  transition: all 0.3s ease;
+  right: 0;
+  width: 250px;
+  background-color: #734993;
+  border-radius: 8px;
+  padding: 10px;
+  display: none; 
+  z-index: 100;
 }
 
-/* Show the logout button when hovering over the user button */
-.user-btn:hover .logout-btn {
-  display: inline-block;
-}
-
-/* Optional: Change style when hovering over the user detail span */
-.user-btn:hover .user-detail-btn {
-  color: #0056b3; /* Darker shade of blue */
-  text-decoration: underline;
+.user-btn:hover .sub-menu-wrap {
+  display: block; 
+  
 }
 
 
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.user-info i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bd2c2c;
+  font-size: 24px; /* Adjust icon size */
+  margin-right: 15px;
+  gap: 50px;
+}
+
+.user-info h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0; /* Remove default margin */
+  position:absolute;
+  right: 50px;
+}
 
 
 

@@ -1,0 +1,73 @@
+<!-- <div>
+    <form action="">
+        <div>
+            <h3>New USer Registration Form</h3>
+        </div>
+        <div class="mb-3">
+            
+            <input type="text" class="form-control  bg-body-secondary" 
+             placeholder="User Full Name" formControlName="fullname"  required>
+
+             <input type="text" class="form-control  bg-body-secondary" 
+             placeholder="Email" formControlName="userId" required>
+
+             <input type="text" class="form-control  bg-body-secondary" 
+             placeholder="Password" formControlName="userId" required>
+
+             <input type="text" class="form-control  bg-body-secondary" 
+             placeholder="Confirm Password" formControlName="userId" required>
+            <button class=" w-100  bg-secondary " type="button"  (click)="register()">Register</button>
+        </div>
+    </form>
+</div> -->
+
+<div class="RegisterForm">
+  <h2>New User Register</h2>
+  <form (ngSubmit)="register()">
+    <div class="form">
+      <div>
+        <label>Full Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="registerObj.fullName"
+          Name="fullName"
+          required
+        />
+      </div>
+      <div>
+        <label>User ID:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="registerObj.user_id"
+          name="user_id"
+          required
+        />
+      </div>
+
+      <div>
+        <label>Password:</label>
+        <input
+          type="password"
+          class="form-control"
+          [(ngModel)]="registerObj.password"
+          name="password"
+          required
+        />
+      </div>
+      <div>
+        <label>Confirm Password:</label>
+        <input
+          type="password"
+          class="form-control"
+          [(ngModel)]="registerObj.confirmPassword"
+          name="confirmPassword"
+          required
+        />
+      </div>
+    </div>
+    <button type="submit">Register</button><br>
+    <span class="log-in">  if you are already register  <a  href="#" type="submit">Log in</a></span>
+  </form>
+</div>
