@@ -28,9 +28,35 @@
 }
 
 
-/* *{
-    background-image: url('assets/img/nature.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .RegisterForm {
+      width: 100%;
+      padding: 15px;
+      
+      position: absolute;
+      left: 0px;
+    }
+  
+    .RegisterForm h2 {
+      font-size: 1.2em;
+    }
+  
+    .RegisterForm label {
+      font-size: 0.9em;
+    }
+  
+    .RegisterForm input {
+      font-size: 0.9em;
+      padding: 8px;
+    }
+  
+    .RegisterForm button {
+      padding: 8px;
+      font-size: 0.9em;
+    }
+  
+    .RegisterForm .log-in {
+      font-size: 0.8em;
+    }
+  }
