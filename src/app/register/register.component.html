@@ -4,8 +4,20 @@
   <form (ngSubmit)="register()">
     <div class="form">
       <div>
-        <input type="text" class="form-control" [(ngModel)]="registerObj.fullName" name="fullName" required />
+        <input type="text" class="form-control" [(ngModel)]="registerObj.fullName" name="fullName" placeholder="Enter User Full Name" required />
       </div>
+
+      <div>
+        <label>Email Id:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="registerObj.email"
+          name="email"
+          required
+        />
+      </div>
+
       <div>
         <label>User ID:</label>
         <input
@@ -37,9 +49,10 @@
           required
         />
       </div>
-    </div>
+    </div><br>
     <input type="checkbox" > read carefully all personal detail <br>
-    <button type="submit">Register</button><br>
+    <button type="submit">Register</button> &nbsp; 
+    <button type="reset">Reset</button><br>
     <span class="log-in">  if you are already register  <a  href="#" type="submit">Log in</a></span>
   </form>
 </div>

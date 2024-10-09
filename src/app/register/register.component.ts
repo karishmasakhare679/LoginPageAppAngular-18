@@ -19,7 +19,8 @@ export class RegisterComponent {
     "user_id": "",
     "password": "",
     "fullName": "",
-    "confirmPassword": ""
+    "confirmPassword": "",
+    "email": ""
   };
 
   loginObj: any = {
@@ -31,7 +32,7 @@ export class RegisterComponent {
 
   register() {debugger;
     // Basic validation (optional)
-    if (!this.registerObj.user_id || !this.registerObj.password || !this.registerObj.fullName || !this.registerObj.confirmPassword) {
+    if (!this.registerObj.user_id || !this.registerObj.password || !this.registerObj.fullName || !this.registerObj.confirmPassword || !this.registerObj.email) {
       alert("All fields are required!");
       return;
     }
